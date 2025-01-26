@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USTP Calendar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>USTP Calendar</h1>
+    <div>
+        <button id="prevMonth">Previous</button>
+        <span id="currentMonthYear"></span>
+        <button id="nextMonth">Next</button>
+    </div>
+    <table id="calendar">
+        <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Calendar days will be dynamically generated here -->
+        </tbody>
+    </table>
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Note</h2>
+            <textarea id="noteText" rows="4" cols="50"></textarea>
+            <button id="saveNote">Save</button>
+            <button id="deleteNote">Delete</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
